@@ -55,13 +55,25 @@ table {
 
 html, body {
 	height: 100%;
-	background-color: rgb(26, 55, 73);
+	background-color:rgb(26, 55, 73) ;
 
+}
+.flex800(){
+	display: flex;
+	flex-direction: column;
+	
 }
 @fontColor: white;
 @main-color:skyblue;
 @main-font:Arial;
 @font-color:white;
+.centered(){
+	@media (max-width:800px){
+		text-align: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
+}
 .flex-box(){
 	display: flex;
 	flex-direction: row;
@@ -76,23 +88,35 @@ html, body {
 	margin: 0 auto;
 	.center();
 	flex-direction: column;
+	
 	header{
-		border-bottom: black 2px solid;
+		border-bottom: @fontColor 2px solid;
 		padding-bottom: 40px;
 		margin-top: 10px;
+		
+	
 		ul{
 			.flex-box();
 			justify-content: flex-end;
+			@media(max-width: 800px){
+				.flex800();
+				.centered();
+				
+
+			}
 		}
 		li{
 			margin-top: 5px;
 			padding: 5px ;
 			box-sizing: border-box;
 			margin-left: 25px ;
-			border-left: 1px solid black;
+			border-left: 1px solid @fontColor;
 			border-radius: 5px;
 			&:hover{
 				background-color:@main-color;
+			}
+			@media(max-width:800px){
+				border: none;
 			}
 		}//li
 	}//header
@@ -104,7 +128,7 @@ html, body {
 		margin-top: 30px;
 		padding-top: 40px;
 		margin-bottom:45px;
-		border-bottom: 2px solid black;
+		border-bottom: 2px solid @fontColor;
 	
 		h1{
 			display: inline-block;
@@ -135,23 +159,32 @@ html, body {
 		.flex-box();
 		margin-bottom: 15px;
 		justify-content: space-between;
+		@media(max-width:800px){
+			.flex800();
+			justify-content: center;
+
+		}
 		h2{
 			font-size:30px;
 			font-weight:bold;
 			display: block;
 			margin-bottom: 7px;
+			.centered();
 		}
 		ul{
 			list-style-type: disc;
 			font-size: 20px;
+			.centered();
 		}
 		img{
 			width: 300px;
+			.centered();
 		}
-		border-bottom: 2px dotted black;
+		border-bottom: 2px dotted @fontColor;
 		padding-bottom: 20px;
 	}//mid-section
 	footer{
+		.centered();
 		margin-bottom: 10px;
 		a{
 			display: inline-block;
@@ -166,7 +199,7 @@ html, body {
 				color: black;
 			}
 		}
-	}
+	}//footer
 	
 }// Main-container
 

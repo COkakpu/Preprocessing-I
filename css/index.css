@@ -144,7 +144,7 @@ body {
   flex-direction: column;
 }
 .main-container header {
-  border-bottom: black 2px solid;
+  border-bottom: white 2px solid;
   padding-bottom: 40px;
   margin-top: 10px;
 }
@@ -153,16 +153,34 @@ body {
   flex-direction: row;
   justify-content: flex-end;
 }
+@media (max-width: 800px) {
+  .main-container header ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) and (max-width: 800px) {
+  .main-container header ul {
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
 .main-container header li {
   margin-top: 5px;
   padding: 5px ;
   box-sizing: border-box;
   margin-left: 25px ;
-  border-left: 1px solid black;
+  border-left: 1px solid white;
   border-radius: 5px;
 }
 .main-container header li:hover {
   background-color: skyblue;
+}
+@media (max-width: 800px) {
+  .main-container header li {
+    border: none;
+  }
 }
 .main-container .head-content {
   display: block;
@@ -172,7 +190,7 @@ body {
   margin-top: 30px;
   padding-top: 40px;
   margin-bottom: 45px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
 }
 .main-container .head-content h1 {
   display: inline-block;
@@ -203,8 +221,15 @@ body {
   flex-direction: row;
   margin-bottom: 15px;
   justify-content: space-between;
-  border-bottom: 2px dotted black;
+  border-bottom: 2px dotted white;
   padding-bottom: 20px;
+}
+@media (max-width: 800px) {
+  .main-container .midSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .main-container .midSection h2 {
   font-size: 30px;
@@ -212,15 +237,43 @@ body {
   display: block;
   margin-bottom: 7px;
 }
+@media (max-width: 800px) {
+  .main-container .midSection h2 {
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
 .main-container .midSection ul {
   list-style-type: disc;
   font-size: 20px;
 }
+@media (max-width: 800px) {
+  .main-container .midSection ul {
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
 .main-container .midSection img {
   width: 300px;
 }
+@media (max-width: 800px) {
+  .main-container .midSection img {
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
 .main-container footer {
   margin-bottom: 10px;
+}
+@media (max-width: 800px) {
+  .main-container footer {
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
 }
 .main-container footer a {
   display: inline-block;
