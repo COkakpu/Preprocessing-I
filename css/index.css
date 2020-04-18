@@ -133,6 +133,7 @@ table {
 html,
 body {
   height: 100%;
+  background-color: #1a3749;
 }
 .main-container {
   width: 90%;
@@ -173,12 +174,13 @@ body {
   width: 100%;
   font-size: 55px;
   font-weight: bold;
-  margin-left: 10%;
 }
 .main-container .head-content div {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
 }
 .main-container .head-content p {
   font-size: 25px;
@@ -188,6 +190,6 @@ body {
 .main-container .head-content img {
   display: block;
   box-sizing: border-box;
-  margin-right: -10%;
   padding-top: 30px;
+  width: 40%;
 }
